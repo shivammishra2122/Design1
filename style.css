@@ -1,0 +1,526 @@
+@font-face {
+  font-family: "gilroy";
+  src: url("./Gilroy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Six Caps";
+  src: url("./SixCaps-Regular.ttf");
+}
+@font-face {
+  font-family: "Abel";
+  src: url("./Abel-Regular.ttf");
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  cursor: none;
+  overflow-x: hidden;
+  background-color: rgb(26, 25, 25);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#main #cursor {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2.5px solid white;
+  /* opacity: 0.5; */
+  pointer-events: none;
+}
+#main #cursor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 6px;
+  width: 6px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: rgb(193, 193, 193);
+  /* opacity: 0.6; */
+}
+#main {
+  width: 100vw;
+  min-width: 100vh;
+  overflow-x: hidden;
+}
+#main #first {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(26, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main #first #textImage {
+  height: 70vh;
+  width: 70vw;
+  background-color: rgb(26, 25, 25);
+  overflow: hidden;
+  animation: b 1.5s linear 1s both;
+}
+@keyframes b {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#main #first #textImage .lines {
+  align-items: center;
+  display: flex;
+  height: 33.33%;
+  justify-content: space-between;
+}
+#main #first #textImage .lines h1 {
+  color: rgb(221, 220, 220);
+  font-size: 14vw;
+  line-height: 14vw;
+  width: 80%;
+  font-family: "Abel", "Gilroy", sans-serif;
+  font-weight: 300;
+  /* letter-spacing: -25px; */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#main #first #textImage .lines .small {
+  font-family: "Six Caps", sans-serif;
+  font-size: 7vw;
+  color: rgb(219, 219, 219);
+  letter-spacing: 0.3vw;
+}
+#main #first #textImage .lines #Image1 {
+  background-image: url(https://uploads-ssl.webflow.com/620f7be7ba14210e13ef2aa0/62122431701e19503811b842_Mask%20Group.jpg);
+  height: 70%;
+  width: 30%;
+  background-size: cover;
+}
+#main #first #textImage .lines #Image2 {
+  background-image: url(https://uploads-ssl.webflow.com/620f7be7ba14210e13ef2aa0/6212263a0f482f1d16bf8b7b_Mask%20Group2-p-500.jpeg);
+  height: 80%;
+  width: 40%;
+  background-size: cover;
+}
+#main #first #textImage #back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: auto;
+}
+
+#main #first #textImage .bac {
+  background-color: rgb(26, 25, 25);
+  /* background-color: #fff; */
+  height: 100%;
+  width: 10.5%;
+  transform-origin: left;
+  animation: a 1.5s ease-in-out 1s both;
+}
+
+@keyframes a {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+#main #nav {
+  position: fixed;
+  z-index: 9999;
+  height: 10%;
+  width: 100%;
+  /* background-color: #fff; */
+  display: flex;
+  justify-content: space-between;
+}
+#main #nav #left {
+  margin-left: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Six Caps";
+  color: white;
+}
+#main #nav #left img {
+  height: 1.7vw;
+  margin-right: 0.5vw;
+  width: 1.7vw;
+}
+#main #nav #left h1 {
+  font-weight: 100;
+  opacity: 0.8;
+  font-size: 1.7vw;
+}
+#main #nav #right {
+  margin-right: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Six Caps";
+  color: white;
+}
+#main #nav #right button {
+  font-family: gilroy;
+  /* position: absolute; */
+  font-size: 1.3vw;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: none;
+  color: white;
+  background-color: transparent;
+}
+#main #second {
+  height: 390vh;
+  width: 100vw;
+  background-color: rgb(26, 25, 25);
+  position: relative;
+}
+#main #second #rightUpperText {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  width: 40vw;
+  font-weight: 600;
+  height: 7vh;
+  font-size: 1vw;
+  color: rgb(207, 206, 206);
+  font-family: Abel;
+}
+#main #second #rightUpperTextOver {
+  position: absolute;
+  top: 0%;
+  background-color: rgb(26, 25, 25);
+  right: 10%;
+  width: 40vw;
+  height: 7vh;
+  animation: ab 4s cubic-bezier(0.59, 0.24, 0, 0.74) both;
+  transform-origin: top;
+}
+@keyframes ab {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(90deg);
+  }
+}
+#main #second #rightUpperText::before {
+  content: "";
+  background-color: #fff;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 3%;
+  left: -5%;
+}
+#main #second #rightUpperText button {
+  border: none;
+  background-color: transparent;
+  color: rgb(205, 205, 205);
+  letter-spacing: 0.2vw;
+  font-family: Six Caps;
+  font-size: 1.5vw;
+  margin-left: 0.5vw;
+}
+#main #second #rightUpperText button h1 {
+  font-weight: 500;
+  font-size: 2vw;
+  transition: color 0.5s;
+}
+#main #second #rightUpperText button h1:hover {
+  color: orange;
+  transition: color 0.5s;
+}
+#main #second #selectedProject {
+  color: rgb(205, 205, 205);
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 85%;
+  font-family: Abel;
+}
+#main #second #selectedProject::before {
+  content: "";
+  background-color: #fff;
+  height: 0.7vw;
+  width:0.7vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 0%;
+}
+#main #second #selectedProject h1 {
+  margin-left: 1vw;
+  font-size: 2vw;
+}
+#main #second #Image1 {
+  height: 95vh;
+  width: 100vw;
+  position: absolute;
+  top: 65vh;
+}
+#main #second #Image1 #card {
+  margin-left: 5vw;
+  height: 95vh;
+  width: 35vw;
+  overflow: hidden;
+}
+#main #second #Image1 #imgh {
+  transition: transform 2s;
+  height: 95vh;
+  width: 35vw;
+  background-image: url(https://uploads-ssl.webflow.com/6217917e00775727c13b7089/624ae1e62c4a606ad8b3ba3b_DAN06477.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#main #second #Image1 #imgh:hover {
+  transform: scale(1.2);
+  transition: transform 2s;
+}
+#main #second #Image1 #text {
+  font-family: Abel;
+  font-size: 5vw;
+  color: rgb(221, 220, 220);
+  position: absolute;
+  top: 36%;
+  left: 35%;
+  height: 40vh;
+  transition: color 0.5s;
+}
+#main #second #Image1 #text h1:hover {
+  color: rgb(202, 54, 0);
+  transition: color 0.5s;
+}
+#main #second #Image1 #text p {
+  width: 15vw;
+  font-size: 1vw;
+  margin-left: 6vw;
+}
+#main #second #Image1 #text button {
+  border: none;
+  background-color: transparent;
+  margin-left: 6vw;
+  font-size: 0.7vw;
+  color: rgb(221, 220, 220);
+  transition: color 0.5s;
+}
+#main #second #Image1 #text button h1 {
+  font-weight: 300;
+}
+#main #second #Image1 #text button:hover {
+  color: orange;
+  transition: color 0.5s;
+}
+#main #second #Image2 {
+  height: 95vh;
+  width: 100vw;
+  position: absolute;
+  top: 180vh;
+}
+#main #second #Image2 #card {
+  position: absolute;
+  right: 5vw;
+  height: 95vh;
+  width: 35vw;
+  overflow: hidden;
+}
+#main #second #Image2 #imgh {
+  transition: transform 2s;
+  height: 95vh;
+  width: 35vw;
+  background-image: url(https://uploads-ssl.webflow.com/6217917e00775727c13b7089/6217994ce56e07fefdb6cab4_facileb.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#main #second #Image2 #imgh:hover {
+  transform: scale(1.2);
+  transition: transform 2s;
+}
+#main #second #Image2 #text {
+  font-family: Abel;
+  font-size: 5vw;
+  color: rgb(221, 220, 220);
+  position: absolute;
+  top: 36%;
+  left: 25%;
+  height: 40vh;
+  transition: color 0.5s;
+}
+#main #second #Image2 #text h1:hover {
+  color: rgb(202, 54, 0);
+  transition: color 0.5s;
+}
+#main #second #Image2 #text p {
+  width: 20vw;
+  font-size: 1vw;
+  margin-left: 7vw;
+}
+#main #second #Image2 #text button {
+  border: none;
+  position: absolute;
+  top: 17vw;
+  left: 14%;
+  background-color: transparent;
+  font-size: 0.7vw;
+  color: rgb(221, 220, 220);
+  transition: color 0.5s;
+}
+#main #second #Image2 #text button h1 {
+  font-weight: 300;
+}
+#main #second #Image2 #text button:hover {
+  color: orange;
+  transition: color 0.5s;
+}
+#main #second #Image3 {
+  height: 95vh;
+  width: 100vw;
+  position: absolute;
+  top: 285vh;
+}
+#main #second #Image3 #card {
+  margin-left: 5vw;
+  height: 95vh;
+  width: 35vw;
+  overflow: hidden;
+}
+#main #second #Image3 #imgh {
+  transition: transform 2s;
+  height: 95vh;
+  width: 35vw;
+  background-image: url(https://uploads-ssl.webflow.com/6217917e00775727c13b7089/624ae11455ee8a618c6871a0_pexels-pavel-danilyuk-7108112.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#main #second #Image3 #imgh:hover {
+  transform: scale(1.2);
+  transition: transform 2s;
+}
+#main #second #Image3 #text {
+  font-family: Abel;
+  font-size: 5vw;
+  color: rgb(221, 220, 220);
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  height: 40vh;
+  transition: color 0.5s;
+}
+#main #second #Image3 #text h1:hover {
+  color: rgb(202, 54, 0);
+  transition: color 0.5s;
+}
+#main #second #Image3 #text h1 {
+  line-height: 7.15vw;
+}
+#main #second #Image3 #text p {
+  width: 20vw;
+  font-size: 1vw;
+  margin-left: 5vw;
+}
+#main #second #Image3 #text button {
+  border: none;
+  background-color: transparent;
+  margin-left: 5vw;
+  font-size: 0.7vw;
+  color: rgb(221, 220, 220);
+  transition: color 0.5s;
+}
+#main #second #Image3 #text button h1 {
+  font-weight: 300;
+}
+#main #second #Image3 #text button:hover {
+  color: orange;
+  transition: color 0.5s;
+}
+#main #bottom {
+  height: 15vh;
+  width: 90vw;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#main #bottom #line {
+  position: absolute;
+  top: 0;
+  width: 90vw;
+  height: 1px;
+  background-color: rgb(221, 220, 220);
+}
+#main #bottom #left {
+  font-family: Abel;
+  font-size: 1vw;
+  display: flex;
+  color: rgb(221, 220, 220);
+  align-items: center;
+}
+#main #bottom #left img {
+  height: 0.9vw;
+  margin-right: 0.5vw;
+  width: 0.9vw;
+}
+#main #bottom #middle {
+  font-family: Abel;
+  transform: translate(0%, 0);
+  font-size: 0.7vw;
+  display: flex;
+  color: rgb(221, 220, 220);
+  align-items: center;
+  position: relative;
+  transition: color 0.5s;
+}
+#main #bottom #middle:hover {
+  color: rgb(202, 54, 0);
+}
+#main #bottom #middle::before {
+  top: 30%;
+  content: "";
+  position: absolute;
+  left: -10%;
+  height: 0.7vw;
+  width: 0.7vw;
+  border-radius: 50%;
+  background-color: rgb(221, 220, 220);
+}
+#main #bottom #right {
+  font-family: Abel;
+  font-size: 0.7vw;
+  display: flex;
+  color: rgb(221, 220, 220);
+  align-items: center;
+  position: relative;
+  transition: color 0.5s;
+  transition: color 0.5s;
+}
+#main #bottom #right h1 {
+  margin-right: 0.4vw;
+}
+#main #bottom #right h1:hover {
+  transition: color 0.5s;
+  color: rgb(202, 54, 0);
+}

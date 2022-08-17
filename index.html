@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="nav">
+        <div id="left">
+          <img
+            src="https://uploads-ssl.webflow.com/620f7be7ba14210e13ef2aa0/620f891519598b48aa921065_TIP-PROJECTS.svg"
+            alt="earth"
+          />
+          <h1>RICCARDO NIEDDU</h1>
+        </div>
+        <div id="right">
+          <button>Work</button>
+          <button>About</button>
+          <button>Contact</button>
+        </div>
+      </div>
+      <div id="first">
+        <div id="textImage">
+          <div class="lines">
+            <h1 style="text-align: left; letter-spacing: 0.7vw">CREATIVE</h1>
+            <div class="small">DIGITAL</div>
+          </div>
+          <div class="lines">
+            <div id="Image1"></div>
+            <h1>DESIGNER</h1>
+          </div>
+          <div class="lines">
+            <div class="small" style="width: 5%">FROM</div>
+            <h1 style="width: 50%; text-align: center">INDIA</h1>
+            <div id="Image2"></div>
+          </div>
+          <div id="back">
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+            <div class="bac"></div>
+          </div>
+        </div>
+      </div>
+      <div id="second">
+        <div id="rightUpperText">
+          I AM RICCARDO, 23 YEARS OLD AND I AM A SELF-TAUGHT DIGITAL DESIGNER
+          FROM ROME. CURRENTLY I DO MY JOB AS A FREELANCE COLLABORATING WITH
+          SMALL COMPANIES AND AGENCIES, I DEAL WITH UI DESIGN / FRONT-END
+          DEVELOPMENT AND MOTION DESIGN. <br /><br /><br />
+          <button>
+            <h1>Read more</h1>
+          </button>
+        </div>
+        <div id="rightUpperTextOver"></div>
+        <div id="selectedProject">
+          <h1>Selected Project</h1>
+          <br />
+          <hr />
+        </div>
+        <div id="Image1">
+          <div id="card">
+            <div id="imgh"></div>
+          </div>
+          <div id="text">
+            <h1>S.SCARCELLI</h1>
+            <p>
+              WEBSITE FOR A PROFESSIONAL VIDEO MAKER FROM ROME WHO COLLABORATES
+              WITH IMPORTANT BRANDS AND PERSONALITIES
+            </p>
+            <button>
+              <h1>View Project</h1>
+            </button>
+          </div>
+        </div>
+        <div id="Image2">
+          <div id="card">
+            <div id="imgh"></div>
+          </div>
+          <div id="text">
+            <h1>FACILEBAR.IT</h1>
+            <p>
+              E-COMMERCE WEBSITE AND WEB PLATFORM FOR B2B SALES IN THE HO.RE.CA
+              SECTOR.
+            </p>
+            <button>
+              <h1>View Project</h1>
+            </button>
+          </div>
+        </div>
+        <div id="Image3">
+          <div id="card">
+            <div id="imgh"></div>
+          </div>
+          <div id="text">
+            <h1>
+              CMC <br />
+              GALLARATE
+            </h1>
+            <p>WEBSITE FOR A PRIVATE MEDICAL CENTER IN GALLARATE, ITALY</p>
+            <button>
+              <h1>View Project</h1>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="bottom">
+        <div id="line"></div>
+        <div id="left">
+          <img
+            src="https://uploads-ssl.webflow.com/620f7be7ba14210e13ef2aa0/620f891519598b48aa921065_TIP-PROJECTS.svg"
+            alt="earth"
+          />
+
+          © 2022
+        </div>
+        <div id="middle">
+          <h1>LET'S GET IN TOUCH</h1>
+        </div>
+        <div id="right">
+          <h1>Instagram</h1>
+          <h1>LinkedIn</h1>
+        </div>
+      </div>
+      <div id="cursor">
+        <div class="shape"></div>
+      </div>
+    </div>
+    <script>
+      const cursor = document.querySelector("#cursor");
+
+      window.addEventListener("mousemove", (event) => {
+        let x = event.pageX,
+          y = event.pageY;
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+      });
+    </script>
+  </body>
+</html>
